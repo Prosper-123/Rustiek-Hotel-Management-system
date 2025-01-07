@@ -1,40 +1,47 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; 
+import room1 from "../images/room1.jpg";
+import room2 from "../images/room2.jpg";
+import room3 from "../images/room3.jpg";
+import room4 from "../images/room4.jpg";
 
 const RoomsPage = () => {
+  const navigate = useNavigate(); // Initialize useNavigate for navigation
+
   const [rooms, setRooms] = useState([
     {
       id: 1,
       name: "Deluxe Room",
       price: 120,
-      image: "/assets/room1.jpg",
+      image: room1,
       description: "A luxurious room with a king-sized bed and city view.",
     },
     {
       id: 2,
       name: "Standard Room",
       price: 80,
-      image: "/assets/room2.jpg",
+      image: room2,
       description: "A comfortable room with all the basic amenities.",
     },
     {
       id: 3,
       name: "Suite",
       price: 200,
-      image: "/assets/room3.jpg",
+      image: room3,
       description: "A spacious suite with a separate living area and balcony.",
     },
     {
       id: 4,
       name: "Family Room",
       price: 150,
-      image: "/assets/room4.jpg",
+      image: room4,
       description: "A large room with two queen-sized beds, perfect for families.",
     },
     {
       id: 5,
       name: "Executive Room",
       price: 180,
-      image: "/assets/room5.jpg",
+      image: room1,
       description: "An upscale room with a work desk and premium amenities.",
     },
   ]);
@@ -56,6 +63,16 @@ const RoomsPage = () => {
       ...prevDetails,
       [name]: value,
     }));
+  };
+
+  // Updated handleBookNow to accept roomId
+  const handleBookNow = (roomId) => {
+    // Set roomId in booking details if not already set
+    setBookingDetails((prevDetails) => ({
+      ...prevDetails,
+      roomId,
+    }));
+    navigate("/booking"); // Use navigate to go to booking page
   };
 
   const handleBookingSubmit = (room) => {
@@ -100,7 +117,7 @@ const RoomsPage = () => {
               <p style={styles.roomDescription}>{room.description}</p>
               <p style={styles.roomPrice}>${room.price} / night</p>
               <button
-                onClick={() => setBookingDetails({ ...bookingDetails, roomId: room.id })}
+                onClick={() => handleBookNow(room.id)} // Pass room id to handleBookNow
                 style={styles.bookButton}
               >
                 Book Now
@@ -159,7 +176,7 @@ const styles = {
     padding: "20px",
   },
   hero: {
-    backgroundImage: 'url("/assets/rooms-hero.jpg")',
+    backgroundImage: `url(${room1})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     textAlign: "center",

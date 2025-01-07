@@ -37,7 +37,7 @@ const styles = {
   container: {
     padding: "40px",
     textAlign: "center",
-    backgroundColor: "#f4f4f4",
+    backgroundColor: "#f4f4f4", // Keeping section light
   },
   heading: {
     fontSize: "2rem",
@@ -51,35 +51,36 @@ const styles = {
   },
   card: {
     width: "300px",
-    border: "1px solid #ddd",
     borderRadius: "10px",
-    backgroundColor: "#fff",
+    backgroundColor: "#007bff", // Changed to blue
+    color: "white", // White text for contrast
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
     overflow: "hidden",
     textAlign: "center",
+    padding: "20px",
   },
   image: {
     width: "100%",
     height: "150px",
     objectFit: "cover",
+    borderRadius: "10px 10px 0 0", // Keeps the image rounded only on top
   },
   title: {
     fontSize: "1.5rem",
     margin: "10px 0",
   },
   description: {
-    padding: "0 10px",
     fontSize: "1rem",
     marginBottom: "10px",
   },
   button: {
     padding: "10px 20px",
-    backgroundColor: "#007bff",
-    color: "white",
+    backgroundColor: "#ffcc00", // Yellow for contrast
+    color: "#333",
     border: "none",
     borderRadius: "5px",
-    marginBottom: "10px",
     cursor: "pointer",
+    fontWeight: "bold",
   },
 };
 

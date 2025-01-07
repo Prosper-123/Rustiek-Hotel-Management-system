@@ -1,4 +1,5 @@
 import React from "react";
+import room2 from "../images/room2.jpg";
 
 const AboutUsPage = () => {
   return (
@@ -86,7 +87,7 @@ const styles = {
     backgroundColor: "#f5f5f5",
   },
   hero: {
-    backgroundImage: 'url("/assets/about-hero.jpg")',
+    backgroundImage: `url(${room2})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     textAlign: "center",

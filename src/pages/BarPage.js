@@ -1,4 +1,17 @@
 import React, { useState } from "react";
+import barBackground from "../images/barbackground.jpg";
+import cocktails from "../images/cocktails.jpg";
+import mocktails from "../images/mocktails.jpg";
+import beer from "../images/beer.jpg";
+import classicMojito from "../images/classicMojito.jpg";
+import oldFashioned from "../images/oldFashioned.jpg";
+import Margarita from "../images/Margarita.jpg";
+import virgin from "../images/virgin.jpg";
+import citrus from "../images/citrus.jpg";
+import berry from "../images/berry.jpg";
+import craft from "../images/craft.jpg";
+import stout from "../images/stout.jpg";
+import ipa from "../images/ipa.jpg";
 
 const BarPage = () => {
   const [cart, setCart] = useState([]);
@@ -6,19 +19,19 @@ const BarPage = () => {
   // Drink categories and their respective items, now including images
   const menuCategories = {
     cocktails: [
-      { name: "Classic Mojito", price: 8, image: "/assets/classic-mojito.jpg" },
-      { name: "Old Fashioned", price: 10, image: "/assets/old-fashioned.jpg" },
-      { name: "Margarita", price: 9, image: "/assets/margarita.jpg" },
+      { name: "Classic Mojito", price: 8, image: classicMojito },
+      { name: "Old Fashioned", price: 10, image: oldFashioned },
+      { name: "Margarita", price: 9, image: Margarita },
     ],
     mocktails: [
-      { name: "Virgin Mojito", price: 6, image: "/assets/virgin-mojito.jpg" },
-      { name: "Citrus Punch", price: 7, image: "/assets/citrus-punch.jpg" },
-      { name: "Berry Bliss", price: 6, image: "/assets/berry-bliss.jpg" },
+      { name: "Virgin Mojito", price: 6, image: virgin },
+      { name: "Citrus Punch", price: 7, image: citrus },
+      { name: "Berry Bliss", price: 6, image: berry },
     ],
     beers: [
-      { name: "Craft Beer", price: 6, image: "/assets/craft-beer.jpg" },
-      { name: "IPA", price: 5, image: "/assets/ipa.jpg" },
-      { name: "Stout", price: 7, image: "/assets/stout.jpg" },
+      { name: "Craft Beer", price: 6, image: craft },
+      { name: "IPA", price: 5, image: ipa },
+      { name: "Stout", price: 7, image: stout },
     ],
   };
 
@@ -118,18 +131,18 @@ const BarPage = () => {
         <h2 style={styles.sectionTitle}>Gallery</h2>
         <div style={styles.gallery}>
           <img
-            src="/assets/bar1.jpg"
-            alt="Bar Ambience"
+            src= {beer}
+            alt="Beer"
             style={styles.galleryImage}
           />
           <img
-            src="/assets/drink1.jpg"
+            src= {cocktails}
             alt="Cocktail"
             style={styles.galleryImage}
           />
           <img
-            src="/assets/bar2.jpg"
-            alt="Bar Counter"
+            src= {mocktails}
+            alt= "mocktails"
             style={styles.galleryImage}
           />
         </div>
@@ -156,10 +169,10 @@ const styles = {
     padding: "20px",
   },
   hero: {
-    backgroundImage: 'url("/assets/bar-hero.jpg")',
+    backgroundImage: `url(${barBackground})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    color: "black",
+    color: "white",
     textAlign: "center",
     padding: "100px 20px",
     marginBottom: "40px",

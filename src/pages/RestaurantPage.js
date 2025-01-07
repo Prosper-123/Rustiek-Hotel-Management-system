@@ -1,4 +1,15 @@
 import React, { useState } from "react";
+import restaurantBackground from "../images/restaurantBackground.jpg";
+import grilledSalmon from "../images/grilledSalmon.jpg";
+import pasta from "../images/pasta.jpg";
+import salad from "../images/salad.jpg";
+import chicken from "../images/chicken.jpg";
+import vegetarian from "../images/vegetarian.jpg";
+import spaghetti from "../images/spaghetti.jpg";
+import beef from "../images/beef.jpg";
+import Bisque from "../images/Bisque.jpg";
+import tacos from "../images/tacos.jpg";
+import soup from "../images/soup.jpg";
 
 const RestaurantPage = () => {
   const [cart, setCart] = useState([]);
@@ -9,70 +20,63 @@ const RestaurantPage = () => {
       name: "Grilled Salmon",
       price: 25,
       description: "Served with a side of steamed vegetables and garlic butter.",
-      image: "/assets/salmon.jpg",
+      image: grilledSalmon,
     },
     {
       id: 2,
       name: "Pasta Carbonara",
       price: 18,
       description: "Classic Italian pasta with creamy sauce and crispy pancetta.",
-      image: "/assets/carbonara.jpg",
+      image: pasta,
     },
     {
       id: 3,
       name: "Caesar Salad",
       price: 12,
       description: "Fresh romaine lettuce with Caesar dressing and parmesan.",
-      image: "/assets/caesar.jpg",
+      image: salad,
     },
     {
       id: 4,
       name: "Chicken Alfredo",
       price: 20,
       description: "Creamy alfredo sauce with grilled chicken and fettuccine pasta.",
-      image: "/assets/alfredo.jpg",
+      image: chicken,
     },
     {
       id: 5,
       name: "Vegetarian Pizza",
       price: 16,
       description: "Tomato base with mozzarella, peppers, olives, and mushrooms.",
-      image: "/assets/vegpizza.jpg",
+      image: vegetarian,
     },
     {
       id: 6,
       name: "Spaghetti Bolognese",
       price: 14,
       description: "Traditional Italian spaghetti with a rich and savory meat sauce.",
-      image: "/assets/spaghetti.jpg",
+      image:spaghetti,
     },
     {
       id: 7,
       name: "Beef Tenderloin",
       price: 30,
       description: "Tender grilled beef steak served with mashed potatoes and seasonal veggies.",
-      image: "/assets/tenderloin.jpg",
+      image: beef,
     },
     {
       id: 8,
       name: "Lobster Bisque",
       price: 22,
       description: "Creamy lobster soup served with a touch of brandy and garlic croutons.",
-      image: "/assets/lobsterbisque.jpg",
+      image: Bisque,
     },
     {
       id: 9,
       name: "Tom Yum Soup",
       price: 12,
       description: "A spicy Thai soup with shrimp, lemongrass, and lime leaves.",
-      image: "/assets/tomyumsoup.jpg",
-    },
-    {
-      id: 10,
-      name: "Fish Tacos",
-      price: 14,
-      description: "Grilled fish wrapped in soft tortillas, served with fresh salsa and avocado.",
-      image: "/assets/fishtacos.jpg",
+      image: soup,
     },
   ];
 
@@ -170,7 +174,7 @@ const styles = {
     padding: "20px",
   },
   hero: {
-    backgroundImage: 'url("/assets/restaurant-hero.jpg")',
+    backgroundImage: `url(${restaurantBackground})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     color: "black",

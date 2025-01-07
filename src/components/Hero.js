@@ -1,8 +1,9 @@
 import React from "react";
+import lion from "../images/lion.png";
 
 const Hero = () => {
   return (
-    <section style={styles.hero}>
+    <section style={{ ...styles.hero, backgroundImage: `url(${lion})` }}>
       <div>
         <h1 style={styles.heroTitle}>Welcome to Rustiek</h1>
         <p style={styles.heroText}>Experience luxury, comfort, and fine dining.</p>
@@ -24,12 +25,11 @@ const Hero = () => {
 
 const styles = {
   hero: {
-    backgroundImage: 'url("./assets/background.png")', 
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    height: "100vh", 
-    color: "black", 
+    height: "100vh",
+    color: "black",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -41,12 +41,12 @@ const styles = {
     fontSize: "4rem",
     marginBottom: "20px",
     fontWeight: "bold",
-    textShadow: "2px 2px 8px rgba(0, 0, 0, 0.7)", // Adds readability
+    textShadow: "2px 2px 8px rgba(0, 0, 0, 0.7)",
   },
   heroText: {
     fontSize: "1.8rem",
     marginBottom: "30px",
-    textShadow: "1px 1px 6px rgba(0, 0, 0, 0.7)", // Adds readability
+    textShadow: "1px 1px 6px rgba(0, 0, 0, 0.7)",
   },
   heroButton: {
     padding: "15px 30px",

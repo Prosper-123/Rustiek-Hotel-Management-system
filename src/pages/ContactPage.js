@@ -1,14 +1,17 @@
 import React from "react";
+import safari from "../images/safari.jpg"; // Add a cover image to your assets
 
 const ContactPage = () => {
   return (
     <div style={styles.container}>
-      {/* Header Section */}
+      {/* Header Section with Cover Image */}
       <section style={styles.header}>
-        <h1 style={styles.headerTitle}>Get in Touch</h1>
-        <p style={styles.headerText}>
-          We'd love to hear from you. Feel free to reach out with any questions or feedback.
-        </p>
+        <div style={styles.heroOverlay}>
+          <h1 style={styles.headerTitle}>Get in Touch</h1>
+          <p style={styles.headerText}>
+            We'd love to hear from you. Feel free to reach out with any questions or feedback.
+          </p>
+        </div>
       </section>
 
       {/* Contact Information Section */}
@@ -16,11 +19,11 @@ const ContactPage = () => {
         <div style={styles.infoCard}>
           <h3 style={styles.infoTitle}>Address</h3>
           <p>123 Rustiek Street</p>
-          <p>Luxury City, LX 45678</p>
+          <p>Kanase, Botswana</p>
         </div>
         <div style={styles.infoCard}>
           <h3 style={styles.infoTitle}>Phone</h3>
-          <p>(123) 456-7890</p>
+          <p>(+267) 123-456-789</p>
         </div>
         <div style={styles.infoCard}>
           <h3 style={styles.infoTitle}>Email</h3>
@@ -59,11 +62,11 @@ const ContactPage = () => {
         </form>
       </section>
 
-      {/* Map Section */}
+      {/* Map Section - Updated to Kanase, Botswana */}
       <section style={styles.map}>
         <iframe
           title="Hotel Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.835123456789!2d-122.0838515!3d37.3860517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5c1a1a1a1a1%3A0xaaaaaaaaaaaaaa!2sRustiek%20Hotel!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.2232826343775!2d25.938211075802673!3d-24.652618479086794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ea3cbbc8f3f8b03%3A0x8f6e0a9124c5b8c7!2sKanase%2C%20Botswana!5e0!3m2!1sen!2s!4v1704375600000!5m2!1sen!2s"
           width="100%"
           height="400"
           style={{ border: "none", borderRadius: "8px" }}
@@ -84,22 +87,31 @@ const styles = {
     backgroundColor: "#f5f5f5",
   },
   header: {
-    textAlign: "center",
-    padding: "70px 20px",
-    backgroundColor: "#f1f1f1",
-    marginBottom: "50px",
+    position: "relative",
+    height: "300px",
+    backgroundImage: `url(${safari})`, // Cover image
+    backgroundSize: "cover",
+    backgroundPosition: "center",
     borderRadius: "8px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+  },
+  heroOverlay: {
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // Dark overlay for better readability
+    padding: "40px",
+    borderRadius: "8px",
+    color: "white",
   },
   headerTitle: {
     fontSize: "3rem",
     fontWeight: "700",
     marginBottom: "15px",
     textTransform: "uppercase",
-    color: "#333",
   },
   headerText: {
     fontSize: "1.3rem",
-    color: "#666",
   },
   contactInfo: {
     display: "flex",
@@ -114,11 +126,6 @@ const styles = {
     backgroundColor: "#fff",
     borderRadius: "10px",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-    transition: "transform 0.3s, box-shadow 0.3s",
-  },
-  infoCardHover: {
-    transform: "scale(1.05)",
-    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
   },
   infoTitle: {
     fontSize: "1.8rem",
@@ -149,10 +156,6 @@ const styles = {
     border: "1px solid #ccc",
     borderRadius: "6px",
     fontSize: "1rem",
-    transition: "border-color 0.3s",
-  },
-  inputFocus: {
-    borderColor: "#007bff",
   },
   textarea: {
     width: "100%",
@@ -160,7 +163,6 @@ const styles = {
     border: "1px solid #ccc",
     borderRadius: "6px",
     fontSize: "1rem",
-    transition: "border-color 0.3s",
   },
   button: {
     padding: "12px 25px",
@@ -170,10 +172,6 @@ const styles = {
     borderRadius: "6px",
     fontSize: "1.1rem",
     cursor: "pointer",
-    transition: "background-color 0.3s",
-  },
-  buttonHover: {
-    backgroundColor: "#0056b3",
   },
   map: {
     marginTop: "50px",

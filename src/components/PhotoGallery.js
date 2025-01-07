@@ -1,12 +1,11 @@
 import React from "react";
+import gallery1 from "../images/home-gallery-01.jpg"; 
+import gallery2 from "../images/home-gallery-02.jpg";
+import gallery3 from "../images/home-gallery-03.jpg";
+import gallery4 from "../images/home-gallery-04.jpg";
 
 const Gallery = () => {
-  const images = [
-    "/assets/gallery-1.jpg",
-    "/assets/gallery-2.jpg",
-    "/assets/gallery-3.jpg",
-    "/assets/gallery-4.jpg",
-  ];
+  const images = [gallery1, gallery2, gallery3, gallery4];
 
   return (
     <section style={styles.container}>

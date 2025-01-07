@@ -1,4 +1,6 @@
 import React from "react";
+import homeGallery02 from "../images/home-gallery-02.jpg"; 
+import homeGallery04 from "../images/home-gallery-04.jpg";
 
 const RoomsList = () => {
   const rooms = [
@@ -6,14 +8,14 @@ const RoomsList = () => {
       id: 1,
       name: "Deluxe Suite",
       price: 150,
-      image: "/assets/deluxe-suite.jpg",
+      image: homeGallery02, 
       features: ["King Bed", "Free WiFi", "Sea View"],
     },
     {
       id: 2,
       name: "Family Room",
       price: 200,
-      image: "/assets/family-room.jpg",
+      image: homeGallery04,
       features: ["2 Queen Beds", "Balcony", "Kitchenette"],
     },
   ];

@@ -17,6 +17,10 @@ import UserDashoard from "./pages/UserDashoard";
 import RestaurantDashboard from "./pages/RestaurantDashboard";
 import BarDashboard from "./pages/BarDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
+import CartPage from "./pages/CartPage";
+import BookingPage from "./pages/BookingPage";
+import PaymentPage from "./pages/PaymentPage";
+import ConfirmationPage from "./pages/ConfirmationPage";
 
 const App = () => {
   return (
@@ -39,6 +43,10 @@ const App = () => {
           <Route path="/restaurant/dashboard" element={<RestaurantDashboard />} />
           <Route path="/bar/dashboard" element={<BarDashboard />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/booking" element={<BookingPage />} />
+          <Route path="/payment" element={<PaymentPage />} />
+          <Route path="/confirmation" element={<ConfirmationPage />} />
         </Routes>
         <Footer />
       </div>

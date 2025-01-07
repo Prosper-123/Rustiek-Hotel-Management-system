@@ -1,16 +1,26 @@
 import React from "react";
+import galleryBackground from "../images/galleryBackground.png";
+import room1 from "../images/room1.jpg";
+import fineDining from "../images/fineDining.jpg";
+import roofTop from "../images/roofTop.jpg";
+import gardenView from "../images/gardenView.jpg";
+import elegant from "../images/elegant.jpg";
+import conference from "../images/conference.jpg";
+import privateDining from "../images/privateDining.jpg";
+import lobby from "../images/lobby.jpg";
+import spa from "../images/spa.jpg";
 
 const GalleryPage = () => {
   const galleryImages = [
-    { src: "/assets/gallery1.jpg", alt: "Luxurious Suite" },
-    { src: "/assets/gallery2.jpg", alt: "Fine Dining Restaurant" },
-    { src: "/assets/gallery3.jpg", alt: "Rooftop Pool" },
-    { src: "/assets/gallery4.jpg", alt: "Elegant Bar Area" },
-    { src: "/assets/gallery5.jpg", alt: "Garden View" },
-    { src: "/assets/gallery6.jpg", alt: "Conference Hall" },
-    { src: "/assets/gallery7.jpg", alt: "Spa and Wellness Center" },
-    { src: "/assets/gallery8.jpg", alt: "Lobby Lounge" },
-    { src: "/assets/gallery9.jpg", alt: "Private Dining Room" },
+    { src: room1, alt: "Room 1" },
+    { src: fineDining, alt: "Fine Dining" },
+    { src: roofTop, alt: "Rooftop Lounge" },
+    { src: elegant, alt: "Elegant Suite" },
+    { src: gardenView, alt: "Garden View" },
+    { src: conference, alt: "Conference Room" },
+    { src: spa, alt: "Spa and Wellness" },
+    { src: lobby, alt: "Lobby Lounge" },
+    { src: privateDining, alt: "Private Dining" },
   ];
 
   return (
@@ -20,6 +30,17 @@ const GalleryPage = () => {
         <h1 style={styles.heroTitle}>Gallery</h1>
         <p style={styles.heroText}>
           Explore the elegance and luxury of Rustiek through our curated gallery.
+        </p>
+      </section>
+
+      {/* Gallery Description Section */}
+      <section style={styles.description}>
+        <p style={styles.descriptionText}>
+          At <strong>Rustiek</strong>, every detail is designed to create an unforgettable experience. 
+          Our gallery showcases the perfect blend of comfort, luxury, and elegance, from our beautifully 
+          decorated rooms to our exquisite dining areas and serene spa retreats. Whether you're here 
+          for relaxation, fine dining, or a corporate event, our spaces are crafted to exceed your expectations. 
+          Take a visual tour and immerse yourself in the ambiance of Rustiek.
         </p>
       </section>
 
@@ -34,6 +55,17 @@ const GalleryPage = () => {
           </div>
         ))}
       </div>
+
+      {/* Closing Text Section */}
+      <section style={styles.closingText}>
+        <p style={styles.closingTextContent}>
+          The images above offer just a glimpse into the beauty and sophistication that await you at 
+          <strong> Rustiek</strong>. But nothing compares to experiencing it in person. 
+          From the warm hospitality to the refined ambiance, every moment at Rustiek is designed to 
+          leave a lasting impression. We invite you to visit us and indulge in the ultimate comfort, 
+          style, and relaxation. 
+        </p>
+      </section>
     </div>
   );
 };
@@ -49,7 +81,7 @@ const styles = {
   },
   // Hero Section Styles
   hero: {
-    backgroundImage: 'url("/assets/gallery-hero.jpg")',
+    backgroundImage: `url(${galleryBackground})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     textAlign: "center",
@@ -71,23 +103,40 @@ const styles = {
     maxWidth: "800px",
     margin: "0 auto",
   },
+  // Gallery Description Styles
+  description: {
+    maxWidth: "900px",
+    margin: "0 auto",
+    padding: "20px",
+    textAlign: "center",
+    color: "#333",
+    fontSize: "1.2rem",
+    lineHeight: "1.8",
+  },
+  descriptionText: {
+    fontSize: "1.2rem",
+    color: "#555",
+  },
   // Gallery Grid Styles
   grid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
     gap: "20px",
+    marginTop: "30px",
   },
   card: {
     position: "relative",
     overflow: "hidden",
     borderRadius: "12px",
-    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
     cursor: "pointer",
     transition: "transform 0.3s ease, box-shadow 0.3s ease",
+    height: "250px", // Uniform image height
   },
   image: {
     width: "100%",
-    height: "auto",
+    height: "100%",
+    objectFit: "cover", // Ensuring the images fill the space evenly
     display: "block",
     transition: "transform 0.3s ease",
   },
@@ -112,6 +161,22 @@ const styles = {
   },
   cardHoverOverlay: {
     opacity: "1",
+  },
+  // Closing Text Styles
+  closingText: {
+    maxWidth: "900px",
+    margin: "50px auto 20px auto",
+    padding: "20px",
+    textAlign: "center",
+    color: "#333",
+    fontSize: "1.2rem",
+    lineHeight: "1.8",
+    borderTop: "2px solid #ddd",
+    paddingTop: "20px",
+  },
+  closingTextContent: {
+    fontSize: "1.2rem",
+    color: "#555",
   },
 };
 
